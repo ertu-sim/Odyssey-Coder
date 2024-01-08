@@ -1,0 +1,34 @@
+@model List<Post>
+
+
+    <div class="row">
+        <div class="col-12">
+            <h2>Post List</h2>
+            <table class="table tabled-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>PublishedOn</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+
+                    <tr>
+                        <td>@item.PostId</td>
+                        <td><img src="/img/@item.Image" class="img-fluid" width="100px"></td>
+                        <td>@item.Title</td>
+                        <td>@item.Content</td>
+                        <td>@item.PublishedOn</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>

@@ -1,0 +1,52 @@
+@model PostCreateViewModel
+@if(User.Identity!.IsAuthenticated)
+{
+<div class="row">
+    <div class="col-8 ">
+        <div class="bg-white p-4">
+            <h1 class="text-center">Create Post</h1>
+            <form action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">Post Title</label>
+                    <input asp-for="Title" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Url" class="form-label">Post Url</label>
+                    <input asp-for="Url" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Content" class="form-label">Content</label>
+                    <textarea asp-for="Content" class="form-control"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create Post
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="col-4">
+
+    </div>
+</div>
+
+
+@section Scripts {
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.7.0/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector: '#Content'
+    });
+</script>
+
+}
+}else
+{
+<div class="text-center bg-white p-4">
+    <p class="text-danger">Post Oluşturmak için lütfen giriş yapınız hesabınız yoksa kayıt olunuz !</p>
+    <a href="/Users/Login" class="btn btn-primary">Giriş Yap</a>
+    <a href="/Users/Register" class="btn btn-success">kayıt Ol</a>
+</div>
+}

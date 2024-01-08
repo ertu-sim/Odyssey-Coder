@@ -1,0 +1,19 @@
+@model RegisterViewModel
+
+<div class="row">
+    <div class="col-6 ">
+        <div class="bg-white p-4">
+            <h1 class="text-center">Register</h1>
+            <form action="Register" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="UserName" class="form-label">User Name</label>
+                    <input asp-for="UserName" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">kayıt Ol
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>

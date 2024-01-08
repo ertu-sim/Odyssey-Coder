@@ -1,0 +1,8 @@
+proje hayatımda çok deneyimli olmadığım ve yayınlayacağım ilk proje olduğu için eksiklerim varsa öncelikle hepinizden özür dilerim 
+
+db connection string alanını sildim eklmek isterseniz appsettings.Development.json dosyası üzerine ekleyebilirsiniz 
+
+database kısmında aldığım FOREIGN KEY hatalarında yaşadığım zorluklardan dolayı projemde bazı kısımlarda örneğin login işlemlerinde 
+elimdeki imkanlar doğrultusunda hazırlamaya çalıştım..
+
+Saygılarımla ERTUĞRUL ŞİMŞEK 
